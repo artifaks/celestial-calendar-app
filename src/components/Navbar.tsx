@@ -38,7 +38,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-[#191970]/80 backdrop-blur-md shadow-lg border-b border-[#FFD700]/20">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-2">
                       <div className="flex items-center gap-2">
-              <img src="/images/celestia-scope-icon.svg" alt="Celestia Scope" className="w-8 h-8" />
+              <img src="/images/celestia-scope-logo.png" alt="Celestia Scope" className="w-10 h-10" />
               <span className="text-lg text-[#FFD700] font-bold font-serif tracking-wide">Celestia Scope</span>
             </div>
           

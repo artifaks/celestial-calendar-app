@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: 'Celestia Scope',
     images: [
       {
-        url: '/images/crystals.svg',
+        url: '/images/celestia-scope-logo.png',
         width: 1200,
         height: 630,
         alt: 'Celestia Scope - Mystical Astrology Platform',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Celestia Scope - Your Cosmic Journey",
     description: "Discover your birth chart, daily rituals, lunar phases, cosmic forecasts, and personalized astrological insights.",
-    images: ['/images/crystals.svg'],
+    images: ['/images/celestia-scope-logo.png'],
     creator: '@celestiascope',
   },
   robots: {

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
                           <div className="flex items-center gap-2 mb-4">
-                <img src="/images/celestia-scope-icon.svg" alt="Celestia Scope" className="w-8 h-8" />
+                <img src="/images/celestia-scope-logo.png" alt="Celestia Scope" className="w-10 h-10" />
                 <span className="text-xl text-[#FFD700] font-bold font-serif tracking-wide">Celestia Scope</span>
               </div>
             <p className="text-[#C0C0C0] mb-4 max-w-md">Your cosmic journey begins here.</p>

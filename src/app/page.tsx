@@ -32,7 +32,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative z-10 flex flex-col items-center gap-8 pt-24 pb-16">
         <div className="flex items-center gap-3 animate-fade-in">
-          <img src="/images/celestia-scope-icon.svg" alt="Celestia Scope" className="w-12 h-12" />
+          <img src="/images/celestia-scope-logo.png" alt="Celestia Scope" className="w-16 h-16" />
           <h1 className="text-4xl sm:text-5xl font-serif text-[#FFD700] drop-shadow-lg tracking-wide animate-fade-in">The Celestia Scope</h1>
         </div>
         <p className="text-lg sm:text-xl text-[#C0C0C0] text-center max-w-2xl animate-fade-in delay-100">Your mystical portal for daily horoscopes, lunar wisdom, and cosmic rituals.<br className='hidden sm:block'/>Awaken your magic every day.</p>
@@ -52,7 +52,7 @@ export default function Home() {
                 url={siteUrl}
                 title="Celestia Scope - Your Cosmic Journey Awaits"
                 description="Discover daily forecasts, lunar rituals, and personalized astrological insights! 🌟"
-                imageUrl="/images/crystals.svg"
+                imageUrl="/images/celestia-scope-logo.png"
               />
             )}
           </div>
