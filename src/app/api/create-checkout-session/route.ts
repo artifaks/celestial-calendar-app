@@ -13,6 +13,13 @@ const stripe = stripeSecretKey ? new Stripe(stripeSecretKey, {
 
 // eBook data mapping
 const ebooks = {
+  'complete-collection': {
+    title: 'Celestia Scope Complete Collection',
+    description: 'All 4 eBooks: Your Complete Spiritual Journey - Save $5 with bundle pricing',
+    image: 'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebook-covers//Celestial%20Rhythms:%20Navigating%20the%20Cosmos%20Through%20Time.png',
+    priceId: 'price_ebook_bundle',
+    unitAmount: 1499,
+  },
   'celestial-rhythms': {
     title: 'Celestial Rhythms: Navigating the Cosmos Through Time',
     description: 'A comprehensive exploration of humanity\'s relationship with the cosmos, covering timekeeping evolution, cultural traditions, navigation history, and modern applications.',

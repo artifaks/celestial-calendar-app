@@ -20,6 +20,63 @@ export interface Ebook {
 
 export const ebooks: Ebook[] = [
   {
+    id: 'complete-collection',
+    title: 'Celestia Scope Complete Collection',
+    subtitle: 'All 4 eBooks: Your Complete Spiritual Journey',
+    description: 'Get all 4 Celestia Scope eBooks in one complete collection. Save $5 and unlock your full spiritual potential.',
+    coverImage: "https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebook-covers//Celestial%20Rhythms:%20Navigating%20the%20Cosmos%20Through%20Time.png",
+    price: 14.99,
+    priceId: 'price_ebook_bundle',
+    category: 'astrology',
+    pageCount: 522,
+    format: 'PDF',
+    isNew: true,
+    isBestseller: true,
+    releaseDate: '2024-01-30',
+    features: [
+      'All 4 Celestia Scope eBooks included',
+      'Celestial Rhythms: Navigating the Cosmos Through Time',
+      'Herbal Healing: A Beginner\'s Journey into Natural Medicine',
+      'Unlocking the Stars: A Beginner\'s Guide to Your Birth Chart',
+      'The Moon\'s Embrace: Simple Practices for Emotional Recovery',
+      'Save $5 compared to buying individually',
+      'Instant download of all books'
+    ],
+    highlights: [
+      'Complete spiritual journey in one collection',
+      'Save $5 with bundle pricing',
+      'Instant access to all 4 books',
+      'Perfect for spiritual seekers and beginners'
+    ],
+    targetAudience: [
+      'Spiritual seekers wanting comprehensive guidance',
+      'Beginners to astrology and healing',
+      'Anyone interested in cosmic wisdom and natural healing',
+      'People looking for complete spiritual education'
+    ],
+    longDescription: `The Celestia Scope Complete Collection is your comprehensive guide to spiritual growth and cosmic wisdom. This exclusive bundle includes all four of our most popular eBooks, providing you with a complete spiritual education that covers astrology, healing, birth charts, and emotional wellness.
+
+**What's Included:**
+
+1. **Celestial Rhythms: Navigating the Cosmos Through Time** - Discover humanity's relationship with the cosmos throughout history, from ancient civilizations to modern applications.
+
+2. **Herbal Healing: A Beginner's Journey into Natural Medicine** - Learn the fundamentals of herbal medicine and how to use plants for natural healing and wellness.
+
+3. **Unlocking the Stars: A Beginner's Guide to Your Birth Chart** - Master the art of reading and interpreting your birth chart to understand your personality, strengths, and life purpose.
+
+4. **The Moon's Embrace: Simple Practices for Emotional Recovery** - Transform your emotional well-being through lunar cycles, journaling, meditation, and self-care rituals.
+
+**Why Choose the Complete Collection?**
+
+- **Save $5** compared to buying each book individually
+- **Instant access** to all 4 books immediately after purchase
+- **Comprehensive education** covering all aspects of spiritual growth
+- **Perfect for beginners** and experienced practitioners alike
+- **Lifetime access** to all content
+
+Whether you're just beginning your spiritual journey or looking to deepen your existing practice, this collection provides everything you need to unlock your full spiritual potential and connect with the cosmic wisdom that surrounds us all.`
+  },
+  {
     id: 'celestial-rhythms',
     title: 'Celestial Rhythms: Navigating the Cosmos Through Time',
     subtitle: 'A Comprehensive Guide to Humanity\'s Relationship with the Cosmos',

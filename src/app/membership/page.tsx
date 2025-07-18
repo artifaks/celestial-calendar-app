@@ -3,8 +3,49 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import ShareButton from '@/components/ShareButton';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 export default function MembershipPage() {
+  const [loading, setLoading] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState('celestial-gold');
+
+  const handleMembershipSignup = async (planId: string) => {
+    setLoading(true);
+    
+    try {
+      const response = await fetch('/api/create-membership-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          planId: planId,
+          successUrl: typeof window !== 'undefined' ? `${window.location.origin}/membership/success` : '/membership/success',
+          cancelUrl: typeof window !== 'undefined' ? `${window.location.origin}/membership` : '/membership',
+          customerEmail: '', // Will be collected in Stripe checkout
+        }),
+      });
+
+      const { sessionId } = await response.json();
+      const stripe = await stripePromise;
+      
+      if (stripe) {
+        const { error } = await stripe.redirectToCheckout({ sessionId });
+        if (error) {
+          console.error('Error:', error);
+          alert('Payment failed. Please try again.');
+        }
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const premiumFeatures = [
     {
       title: "🔮 Personalized Birth Chart Forecasts",
@@ -65,46 +106,151 @@ export default function MembershipPage() {
       </div>
 
       {/* Pricing Section */}
-      <div className="max-w-4xl mx-auto mb-12">
-        <div className="bg-[#232946]/80 rounded-2xl shadow-xl p-8 border border-[#FFD700]/30">
-          <div className="text-center mb-8">
-            <div className="text-6xl mb-4">🔮</div>
-            <h2 className="text-3xl font-bold text-[#FFD700] mb-2">Only $4.99/month</h2>
-            <p className="text-[#C0C0C0]">Cancel anytime • 7-day free trial</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-[#FFD700] mb-4">What's Included:</h3>
-              <ul className="space-y-3">
-                {premiumFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-lg">{feature.icon}</span>
-                    <div>
-                      <div className="font-semibold text-white">{feature.title}</div>
-                      <div className="text-sm text-[#C0C0C0]">{feature.description}</div>
-                      <div className="text-xs text-yellow-400 mt-1">{feature.status}</div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+      <div className="max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Celestial Gold */}
+          <div className="bg-[#232946]/80 rounded-2xl shadow-xl p-6 border border-[#FFD700]/30">
+            <div className="text-center mb-6">
+              <div className="text-4xl mb-2">⭐</div>
+              <h3 className="text-xl font-bold text-[#FFD700] mb-2">Celestial Gold</h3>
+              <div className="text-3xl font-bold text-white mb-1">$4.99</div>
+              <div className="text-sm text-[#C0C0C0]">per month</div>
             </div>
             
-            <div className="bg-[#0a0a23]/50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-[#FFD700] mb-4">Ready to Upgrade?</h3>
-              <p className="text-[#C0C0C0] mb-6">
-                Join thousands of spiritual seekers who have transformed their lives with cosmic guidance.
-              </p>
-              
-              <button className="w-full bg-gradient-to-r from-[#FFD700] to-[#C0C0C0] text-[#191970] font-bold py-3 px-6 rounded-xl shadow-lg hover:scale-105 transition-transform mb-4">
-                Start 7-Day Free Trial
-              </button>
-              
-              <p className="text-xs text-[#C0C0C0] text-center">
-                Secure payment via Stripe • No commitment required
-              </p>
-            </div>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Personalized Birth Chart Forecasts</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Moon Phase Ritual Guides</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Downloadable Lunar Calendar</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Advanced Astrology Insights</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Priority Support</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Exclusive Content</span>
+              </li>
+            </ul>
+            
+            <button 
+              onClick={() => handleMembershipSignup('celestial-gold')}
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-[#191970] font-bold py-3 px-6 rounded-xl shadow-lg hover:scale-105 transition-transform disabled:opacity-50"
+            >
+              {loading ? 'Processing...' : 'Start Free Trial'}
+            </button>
           </div>
+
+          {/* Cosmic Platinum */}
+          <div className="bg-[#232946]/80 rounded-2xl shadow-xl p-6 border-2 border-[#FFD700] relative">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full text-sm font-bold">
+              MOST POPULAR
+            </div>
+            <div className="text-center mb-6">
+              <div className="text-4xl mb-2">💎</div>
+              <h3 className="text-xl font-bold text-[#FFD700] mb-2">Cosmic Platinum</h3>
+              <div className="text-3xl font-bold text-white mb-1">$9.99</div>
+              <div className="text-sm text-[#C0C0C0]">per month</div>
+            </div>
+            
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Everything in Celestial Gold</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">1-on-1 Monthly Consultations</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Advanced Birth Chart Analysis</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Custom Ritual Creation</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Priority Email Support</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Exclusive Content Library</span>
+              </li>
+            </ul>
+            
+            <button 
+              onClick={() => handleMembershipSignup('cosmic-platinum')}
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-[#191970] font-bold py-3 px-6 rounded-xl shadow-lg hover:scale-105 transition-transform disabled:opacity-50"
+            >
+              {loading ? 'Processing...' : 'Start Free Trial'}
+            </button>
+          </div>
+
+          {/* Mystic Diamond */}
+          <div className="bg-[#232946]/80 rounded-2xl shadow-xl p-6 border border-[#FFD700]/30">
+            <div className="text-center mb-6">
+              <div className="text-4xl mb-2">👑</div>
+              <h3 className="text-xl font-bold text-[#FFD700] mb-2">Mystic Diamond</h3>
+              <div className="text-3xl font-bold text-white mb-1">$19.99</div>
+              <div className="text-sm text-[#C0C0C0]">per month</div>
+            </div>
+            
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Everything in Cosmic Platinum</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Weekly Live Group Sessions</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Custom Jewelry Recommendations</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Personalized Crystal Prescriptions</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">Advanced Transit Alerts</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <span className="text-[#FFD700]">✓</span>
+                <span className="text-white">VIP Community Access</span>
+              </li>
+            </ul>
+            
+            <button 
+              onClick={() => handleMembershipSignup('mystic-diamond')}
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-[#191970] font-bold py-3 px-6 rounded-xl shadow-lg hover:scale-105 transition-transform disabled:opacity-50"
+            >
+              {loading ? 'Processing...' : 'Start Free Trial'}
+            </button>
+          </div>
+        </div>
+        
+        <div className="text-center mt-6">
+          <p className="text-sm text-[#C0C0C0]">
+            Secure payment via Stripe • Cancel anytime • 7-day free trial
+          </p>
         </div>
       </div>
 

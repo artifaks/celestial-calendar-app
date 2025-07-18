@@ -48,9 +48,12 @@ function EbookSuccessContent() {
           setEbookTitle('Herbal Healing: A Beginner\'s Journey into Natural Medicine');
         } else if (ebookId === 'unlocking-stars') {
           setEbookTitle('Unlocking the Stars: A Beginner\'s Guide to Your Birth Chart');
-        } else if (ebookId === 'moons-embrace') {
-          setEbookTitle('The Moon\'s Embrace: Simple Practices for Emotional Recovery');
-        }
+        }     else if (ebookId === 'moons-embrace') {
+      setEbookTitle('The Moon\'s Embrace: Simple Practices for Emotional Recovery');
+    }
+    else if (ebookId === 'complete-collection') {
+      setEbookTitle('Celestia Scope Complete Collection');
+    }
       } else {
         setError(data.error || 'Failed to generate download link');
       }

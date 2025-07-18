@@ -3,6 +3,12 @@ import { supabase } from '@/lib/supabase';
 
 // eBook file mapping
 const ebookFiles = {
+  'complete-collection': [
+    'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebooks//Celestial%20Rhythms:%20Navigating%20the%20Cosmos%20Through%20Time.pdf',
+    'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebooks//Herbal%20Healing:%20A%20Beginner\'s%20Journey%20into%20Natural%20Medicine.pdf',
+    'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebooks//Unlocking%20the%20Stars:%20A%20Beginner\'s%20Guide%20to%20Your%20Birth%20Chart.pdf',
+    'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebooks//The%20Moon\'s%20Embrace:%20Simple%20Practices%20for%20Emotional%20Recovery.pdf'
+  ],
   'celestial-rhythms': 'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebooks//Celestial%20Rhythms:%20Navigating%20the%20Cosmos%20Through%20Time.pdf',
   'herbal-healing': 'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebooks//Herbal%20Healing-%20A%20Beginner\'s%20Journey%20into%20Natural%20Medicine.pdf',
   'unlocking-stars': 'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebooks//Unlocking%20the%20Stars-%20A%20Beginner\'s%20Guide%20to%20Your%20Birth%20Chart.pdf',
