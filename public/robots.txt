@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://thecelestialcalendar.com/sitemap.xml
+Sitemap: https://celestia-scope.vercel.app/sitemap.xml
 
 # Disallow admin areas
 Disallow: /admin/

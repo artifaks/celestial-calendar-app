@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://thecelestialcalendar.com"
+  const baseUrl = "https://celestia-scope.vercel.app"
   
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "daily", priority: 1 },

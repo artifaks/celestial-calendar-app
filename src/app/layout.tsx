@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { AuthProvider } from "../contexts/AuthContext";
 import FloatingShareButton from "@/components/FloatingShareButton";
 import AIChatbot from "@/components/AIChatbot";
+import SEOStructuredData from "@/components/SEOStructuredData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Celestia Scope - Your Cosmic Journey",
   description: "Discover your birth chart, daily rituals, lunar phases, cosmic forecasts, and personalized astrological insights. Join our mystical community for daily horoscopes, meditation guides, and spiritual growth.",
-  keywords: "astrology, birth chart, horoscope, lunar phases, meditation, crystals, zodiac, cosmic forecast, spiritual growth, moon rituals",
+  keywords: "astrology, birth chart, horoscope, lunar phases, meditation, crystals, zodiac, cosmic forecast, spiritual growth, moon rituals, celestia scope, daily horoscope, astrological insights, cosmic journey, mystical astrology, spiritual guidance, zodiac signs, planetary influences, celestial wisdom, cosmic energy, astrological readings, birth chart calculator, daily rituals, lunar wisdom, cosmic predictions, spiritual practices, mystical community, astrology app, horoscope app, birth chart app, spiritual growth app",
   authors: [{ name: "Celestia Scope" }],
   creator: "Celestia Scope",
   publisher: "Celestia Scope",
@@ -29,14 +30,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://thecelestialcalendar.com'),
+  metadataBase: new URL('https://celestia-scope.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Celestia Scope - Your Cosmic Journey",
     description: "Discover your birth chart, daily rituals, lunar phases, cosmic forecasts, and personalized astrological insights.",
-    url: 'https://thecelestialcalendar.com',
+    url: 'https://celestia-scope.vercel.app',
     siteName: 'Celestia Scope',
     images: [
       {
@@ -84,6 +85,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SEOStructuredData />
         <AuthProvider>
           <Navbar />
           <FloatingShareButton />
