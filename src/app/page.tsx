@@ -32,11 +32,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative z-10 flex flex-col items-center gap-8 pt-24 pb-16">
         <div className="flex items-center gap-3 animate-fade-in">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="20" fill="#191970" stroke="#FFD700" strokeWidth="3" />
-            <path d="M24 8a16 16 0 1 0 0 32 16 16 0 1 1 0-32z" fill="#C0C0C0" fillOpacity="0.3" />
-            <circle cx="32" cy="16" r="3" fill="#FFD700" />
-          </svg>
+          <img src="/images/celestia-scope-icon.svg" alt="Celestia Scope" className="w-12 h-12" />
           <h1 className="text-4xl sm:text-5xl font-serif text-[#FFD700] drop-shadow-lg tracking-wide animate-fade-in">The Celestia Scope</h1>
         </div>
         <p className="text-lg sm:text-xl text-[#C0C0C0] text-center max-w-2xl animate-fade-in delay-100">Your mystical portal for daily horoscopes, lunar wisdom, and cosmic rituals.<br className='hidden sm:block'/>Awaken your magic every day.</p>
