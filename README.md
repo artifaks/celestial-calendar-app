@@ -1,4 +1,4 @@
-# 🌟 Celestial Calendar
+# 🌟 Celestia Scope
 
 A mystical astrology app with AI-powered birth charts, daily rituals, cosmic forecasts, personalized insights, and eBook sales.
 

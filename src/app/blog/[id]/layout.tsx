@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: BlogPostLayoutProps): Promise
         : `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/images/default-blog.svg`;
       
       return {
-        title: `${post.title} - Celestial Calendar`,
+        title: `${post.title} - Celestia Scope`,
         description: post.excerpt,
         keywords: post.tags.join(', '),
         authors: [{ name: post.author }],
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostLayoutProps): Promise
           title: post.title,
           description: post.excerpt,
           url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/blog/${id}`,
-          siteName: 'Celestial Calendar',
+          siteName: 'Celestia Scope',
           images: [
             {
               url: imageUrl,
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: BlogPostLayoutProps): Promise
           title: post.title,
           description: post.excerpt,
           images: [imageUrl],
-          creator: '@celestialcalendar',
+          creator: '@celestiascope',
         },
         other: {
           'article:published_time': post.published_at,
@@ -61,19 +61,19 @@ export async function generateMetadata({ params }: BlogPostLayoutProps): Promise
   
   // Fallback metadata
   return {
-    title: 'Cosmic Wisdom - Celestial Calendar',
+    title: 'Cosmic Wisdom - Celestia Scope',
     description: 'Discover mystical insights and spiritual practices for your cosmic journey.',
     openGraph: {
-      title: 'Cosmic Wisdom - Celestial Calendar',
+      title: 'Cosmic Wisdom - Celestia Scope',
       description: 'Discover mystical insights and spiritual practices for your cosmic journey.',
       url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/blog/${id}`,
-      siteName: 'Celestial Calendar',
+      siteName: 'Celestia Scope',
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/images/default-blog.svg`,
           width: 1200,
           height: 630,
-          alt: 'Celestial Calendar Blog',
+          alt: 'Celestia Scope Blog',
         },
       ],
       locale: 'en_US',

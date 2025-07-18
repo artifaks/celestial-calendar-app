@@ -1,4 +1,4 @@
--- Celestial Calendar Database Setup
+-- Celestia Scope Database Setup
 -- Run these commands in your Supabase SQL Editor
 -- This version handles existing tables gracefully
 

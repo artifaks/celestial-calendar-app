@@ -37,12 +37,12 @@ export default function Home() {
             <path d="M24 8a16 16 0 1 0 0 32 16 16 0 1 1 0-32z" fill="#C0C0C0" fillOpacity="0.3" />
             <circle cx="32" cy="16" r="3" fill="#FFD700" />
           </svg>
-          <h1 className="text-4xl sm:text-5xl font-serif text-[#FFD700] drop-shadow-lg tracking-wide animate-fade-in">The Celestial Calendar</h1>
+          <h1 className="text-4xl sm:text-5xl font-serif text-[#FFD700] drop-shadow-lg tracking-wide animate-fade-in">The Celestia Scope</h1>
         </div>
         <p className="text-lg sm:text-xl text-[#C0C0C0] text-center max-w-2xl animate-fade-in delay-100">Your mystical portal for daily horoscopes, lunar wisdom, and cosmic rituals.<br className='hidden sm:block'/>Awaken your magic every day.</p>
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-serif text-[#FFD700] font-bold mb-6 drop-shadow-lg">
-            🌟 Celestial Calendar
+            🌟 Celestia Scope
           </h1>
           <p className="text-xl md:text-2xl text-[#C0C0C0] max-w-3xl mx-auto mb-8">
             Discover your cosmic path through daily forecasts, lunar rituals, and personalized astrological insights.
@@ -54,7 +54,7 @@ export default function Home() {
             {siteUrl && (
               <ShareButton
                 url={siteUrl}
-                title="Celestial Calendar - Your Cosmic Journey Awaits"
+                title="Celestia Scope - Your Cosmic Journey Awaits"
                 description="Discover daily forecasts, lunar rituals, and personalized astrological insights! 🌟"
                 imageUrl="/images/crystals.svg"
               />

@@ -39,7 +39,7 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-2">
           <div className="flex items-center gap-2">
             <span className="text-2xl text-[#FFD700] font-serif tracking-widest">☽</span>
-            <span className="text-lg text-[#FFD700] font-bold font-serif tracking-wide">Celestial Calendar</span>
+            <span className="text-lg text-[#FFD700] font-bold font-serif tracking-wide">Celestia Scope</span>
           </div>
           
           <ul className="flex gap-4 md:gap-8 items-center">

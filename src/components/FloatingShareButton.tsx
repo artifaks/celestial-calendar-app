@@ -11,7 +11,7 @@ export default function FloatingShareButton() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setCurrentUrl(window.location.href);
-      setCurrentTitle(document.title || 'Celestial Calendar - Your Cosmic Journey');
+              setCurrentTitle(document.title || 'Celestia Scope - Your Cosmic Journey');
     }
   }, []);
 

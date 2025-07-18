@@ -18,12 +18,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Celestial Calendar - Your Cosmic Journey",
+  title: "Celestia Scope - Your Cosmic Journey",
   description: "Discover your birth chart, daily rituals, lunar phases, cosmic forecasts, and personalized astrological insights. Join our mystical community for daily horoscopes, meditation guides, and spiritual growth.",
   keywords: "astrology, birth chart, horoscope, lunar phases, meditation, crystals, zodiac, cosmic forecast, spiritual growth, moon rituals",
-  authors: [{ name: "Celestial Calendar" }],
-  creator: "Celestial Calendar",
-  publisher: "Celestial Calendar",
+  authors: [{ name: "Celestia Scope" }],
+  creator: "Celestia Scope",
+  publisher: "Celestia Scope",
   formatDetection: {
     email: false,
     address: false,
@@ -34,16 +34,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Celestial Calendar - Your Cosmic Journey",
+    title: "Celestia Scope - Your Cosmic Journey",
     description: "Discover your birth chart, daily rituals, lunar phases, cosmic forecasts, and personalized astrological insights.",
     url: 'https://thecelestialcalendar.com',
-    siteName: 'Celestial Calendar',
+    siteName: 'Celestia Scope',
     images: [
       {
         url: '/images/crystals.svg',
         width: 1200,
         height: 630,
-        alt: 'Celestial Calendar - Mystical Astrology Platform',
+        alt: 'Celestia Scope - Mystical Astrology Platform',
       },
     ],
     locale: 'en_US',
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Celestial Calendar - Your Cosmic Journey",
+    title: "Celestia Scope - Your Cosmic Journey",
     description: "Discover your birth chart, daily rituals, lunar phases, cosmic forecasts, and personalized astrological insights.",
     images: ['/images/crystals.svg'],
-    creator: '@celestialcalendar',
+    creator: '@celestiascope',
   },
   robots: {
     index: true,

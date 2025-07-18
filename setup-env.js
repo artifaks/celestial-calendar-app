@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🌟 Setting up Celestial Calendar Development Environment...\n');
+console.log('🌟 Setting up Celestia Scope Development Environment...\n');
 
 // Check if .env.local exists
 const envPath = path.join(__dirname, '.env.local');

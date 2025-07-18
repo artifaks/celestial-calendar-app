@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'Celestial Calendar <noreply@yourdomain.com>',
+              from: 'Celestia Scope <noreply@yourdomain.com>',
       to: [email],
       subject: 'Your Daily Horoscope 🌟',
       html: `

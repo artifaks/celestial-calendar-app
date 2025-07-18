@@ -1,4 +1,4 @@
-# 🚀 Deployment Guide for Celestial Calendar
+# 🚀 Deployment Guide for Celestia Scope
 
 ## 📋 Pre-Deployment Checklist
 
