@@ -54,6 +54,9 @@ function EbookSuccessContent() {
     else if (ebookId === 'complete-collection') {
       setEbookTitle('Celestia Scope Complete Collection');
     }
+    else if (ebookId === 'celestial-insights') {
+      setEbookTitle('Celestial Insights: Unlocking Your Birth Chart');
+    }
       } else {
         setError(data.error || 'Failed to generate download link');
       }

@@ -47,6 +47,13 @@ const ebooks = {
     image: 'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebook-covers//The%20Moon\'s%20Embrace:%20Simple%20Practices%20for%20Emotional%20Recovery.png',
     priceId: 'price_moons_embrace',
     unitAmount: 599,
+  },
+  'celestial-insights': {
+    title: 'Celestial Insights: Unlocking Your Birth Chart',
+    description: 'Master the art of reading and interpreting your birth chart to understand your personality, strengths, and life purpose with this comprehensive guide.',
+    image: 'https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebook-covers//Celestial%20Insights:%20Unlocking%20Your%20Birth%20Chart%20COVER.png',
+    priceId: 'price_ebook_799',
+    unitAmount: 799,
   }
 };
 

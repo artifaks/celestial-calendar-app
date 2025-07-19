@@ -34,18 +34,19 @@ export const ebooks: Ebook[] = [
     isBestseller: true,
     releaseDate: '2024-01-30',
     features: [
-      'All 4 Celestia Scope eBooks included',
+      'All 5 Celestia Scope eBooks included',
       'Celestial Rhythms: Navigating the Cosmos Through Time',
       'Herbal Healing: A Beginner\'s Journey into Natural Medicine',
       'Unlocking the Stars: A Beginner\'s Guide to Your Birth Chart',
       'The Moon\'s Embrace: Simple Practices for Emotional Recovery',
-      'Save $5 compared to buying individually',
+      'Celestial Insights: Unlocking Your Birth Chart',
+      'Save $10 compared to buying individually',
       'Instant download of all books'
     ],
     highlights: [
       'Complete spiritual journey in one collection',
-      'Save $5 with bundle pricing',
-      'Instant access to all 4 books',
+      'Save $10 with bundle pricing',
+      'Instant access to all 5 books',
       'Perfect for spiritual seekers and beginners'
     ],
     targetAudience: [
@@ -54,7 +55,7 @@ export const ebooks: Ebook[] = [
       'Anyone interested in cosmic wisdom and natural healing',
       'People looking for complete spiritual education'
     ],
-    longDescription: `The Celestia Scope Complete Collection is your comprehensive guide to spiritual growth and cosmic wisdom. This exclusive bundle includes all four of our most popular eBooks, providing you with a complete spiritual education that covers astrology, healing, birth charts, and emotional wellness.
+    longDescription: `The Celestia Scope Complete Collection is your comprehensive guide to spiritual growth and cosmic wisdom. This exclusive bundle includes all five of our most popular eBooks, providing you with a complete spiritual education that covers astrology, healing, birth charts, emotional wellness, and advanced birth chart interpretation.
 
 **What's Included:**
 
@@ -66,15 +67,147 @@ export const ebooks: Ebook[] = [
 
 4. **The Moon's Embrace: Simple Practices for Emotional Recovery** - Transform your emotional well-being through lunar cycles, journaling, meditation, and self-care rituals.
 
+5. **Celestial Insights: Unlocking Your Birth Chart** - Advanced guide to comprehensive birth chart interpretation, including planetary influences, house systems, and career guidance.
+
 **Why Choose the Complete Collection?**
 
-- **Save $5** compared to buying each book individually
-- **Instant access** to all 4 books immediately after purchase
+- **Save $10** compared to buying each book individually
+- **Instant access** to all 5 books immediately after purchase
 - **Comprehensive education** covering all aspects of spiritual growth
 - **Perfect for beginners** and experienced practitioners alike
 - **Lifetime access** to all content
 
 Whether you're just beginning your spiritual journey or looking to deepen your existing practice, this collection provides everything you need to unlock your full spiritual potential and connect with the cosmic wisdom that surrounds us all.`
+  },
+  {
+    id: 'celestial-insights',
+    title: 'Celestial Insights: Unlocking Your Birth Chart',
+    subtitle: 'A Comprehensive Guide to Understanding Your Astrological Blueprint',
+    description: 'Master the art of reading and interpreting your birth chart to understand your personality, strengths, and life purpose with this comprehensive guide.',
+    coverImage: "https://pmhvmdojpbazijthcskg.supabase.co/storage/v1/object/public/ebook-covers//Celestial%20Insights:%20Unlocking%20Your%20Birth%20Chart%20COVER.png",
+    price: 7.99,
+    priceId: 'price_ebook_799',
+    category: 'astrology',
+    pageCount: 184,
+    format: 'PDF',
+    isNew: true,
+    releaseDate: '2024-01-30',
+    features: [
+      'Comprehensive birth chart interpretation guide',
+      'Step-by-step natal chart analysis',
+      'Planet meanings and zodiac sign characteristics',
+      'House system explanations and interpretations',
+      'Aspect analysis and relationship dynamics',
+      'Moon phase interpretations and lunar influences',
+      'Career guidance through astrology',
+      'Timing life events with celestial wisdom',
+      'Practical exercises and self-reflection prompts',
+      'Sample birth chart readings and examples'
+    ],
+    highlights: [
+      'Learn to calculate and interpret your own birth chart',
+      'Understand the meaning of planets, signs, and houses',
+      'Discover how aspects influence your personality and relationships',
+      'Master moon phase interpretations for emotional insights',
+      'Gain career guidance through astrological analysis',
+      'Learn to time life events with cosmic wisdom'
+    ],
+    targetAudience: [
+      'Astrology beginners and enthusiasts',
+      'People seeking self-discovery and personal growth',
+      'Those interested in understanding their life purpose',
+      'Anyone curious about how cosmic energies influence personality',
+      'Individuals wanting to master birth chart interpretation'
+    ],
+    longDescription: `"Celestial Insights: Unlocking Your Birth Chart" is your comprehensive guide to understanding the profound wisdom encoded in your astrological blueprint. This meticulously crafted book takes you on a journey through the intricate world of birth chart interpretation, revealing how the positions of celestial bodies at the moment of your birth shape your personality, relationships, and life path.
+
+**What You'll Discover:**
+
+**Chapter 1: Introduction to Astrology**
+- The rich history of astrology from ancient Babylonians to modern practice
+- Understanding the zodiac and its four elements (fire, earth, air, water)
+- How moon phases influence our emotional landscape
+- The transition from predictive tool to self-discovery method
+
+**Chapter 2: The Birth Chart Unveiled**
+- What is a birth chart and why it matters
+- The significance of sun, moon, and rising signs
+- How planetary positions shape your unique personality
+- Understanding the twelve houses and their life areas
+
+**Chapter 3: Planetary Influences**
+- Deep dive into each planet's meaning and influence
+- How Mars affects ambition and drive
+- Venus and its role in love and beauty
+- Mercury's impact on communication and learning
+- Jupiter's influence on growth and expansion
+- Saturn's lessons in discipline and structure
+
+**Chapter 4: The Houses of Life**
+- First House: Your identity and self-expression
+- Second House: Values, money, and possessions
+- Third House: Communication, siblings, and short trips
+- Fourth House: Home, family, and emotional foundation
+- Fifth House: Creativity, romance, and children
+- Sixth House: Work, health, and daily routines
+- Seventh House: Partnerships and relationships
+- Eighth House: Transformation, shared resources, and intimacy
+- Ninth House: Higher learning, travel, and philosophy
+- Tenth House: Career, reputation, and public image
+- Eleventh House: Friends, groups, and future goals
+- Twelfth House: Spirituality, subconscious, and hidden matters
+
+**Chapter 5: Aspects and Relationships**
+- Understanding how planets interact with each other
+- Conjunctions, oppositions, trines, and squares
+- How aspects influence your personality and relationships
+- Reading relationship compatibility through synastry
+
+**Chapter 6: Moon Phases and Emotional Wisdom**
+- How your birth moon phase affects your emotional nature
+- New Moon personalities: Introspection and new beginnings
+- Full Moon personalities: Emotional awareness and completion
+- Waxing and waning moon influences
+- Using lunar cycles for personal growth
+
+**Chapter 7: Career Guidance Through Astrology**
+- Identifying your vocational calling through your chart
+- The Midheaven (10th house) and career direction
+- Planetary influences on work style and success
+- Timing career changes with transits
+- Moon phase influences on professional development
+
+**Chapter 8: Timing Life Events**
+- Using astrology for optimal timing
+- Understanding transits and their effects
+- Planning important decisions with cosmic wisdom
+- Lunar phases and their impact on timing
+- How to align personal goals with favorable energies
+
+**Chapter 9: Practical Applications**
+- Step-by-step birth chart calculation
+- Interpreting your own chart with confidence
+- Creating personalized rituals based on your chart
+- Using astrology for daily decision-making
+- Building a spiritual practice around your chart
+
+**Chapter 10: Community and Growth**
+- Connecting with the astrological community
+- Resources for further learning
+- Embracing your unique astrological journey
+- Sharing insights with others
+- Continuing your cosmic education
+
+**Why This Book is Essential:**
+
+- **Comprehensive Coverage**: From basic concepts to advanced interpretation techniques
+- **Practical Approach**: Step-by-step guidance for reading your own chart
+- **Modern Relevance**: Connects ancient wisdom with contemporary life
+- **Emotional Depth**: Explores the moon's influence on our emotional landscape
+- **Career Focus**: Special attention to vocational guidance and timing
+- **Community Building**: Encourages connection with fellow astrology enthusiasts
+
+Whether you're completely new to astrology or have some basic knowledge, this book provides the tools and understanding you need to unlock the wisdom of your birth chart and use it as a guide for personal growth and self-discovery. Your birth chart is a unique cosmic fingerprint that reveals your divine blueprint - let this book be your key to understanding it.`
   },
   {
     id: 'celestial-rhythms',
